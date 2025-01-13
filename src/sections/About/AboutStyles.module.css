@@ -1,0 +1,66 @@
+.aboutSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: var(--background-color);
+  }
+  
+  .sectionTitle {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row; /* Bildet og tekstboksen vises side ved side */
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .aboutImage {
+    width: 100%;
+    max-width: 600px; /* Gjør bildet større */
+    max-height: 500px; /* Tilpasser høyden */
+    object-fit: cover;
+    border-radius: 20px; /* Myke kanter */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Økt skyggedybde */
+  }
+  
+  .textBox {
+    background-color: rgba(255, 255, 255, 0.1); /* Lys bakgrunn for boksen */
+    padding: 20px;
+    border-radius: 15px; /* Myke kanter på boksen */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .textContainer {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  @media (max-width: 800px) {
+    .content {
+      flex-direction: column; /* Stabler bilde og tekst for mobil */
+      align-items: center;
+    }
+  
+    .aboutImage {
+      max-width: 100%;
+      max-height: 400px;
+    }
+  
+    .textBox {
+      text-align: center; /* Justerer tekst for små skjermer */
+    }
+  }
+  

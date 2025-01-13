@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Sentraliserer alt */
+  gap: 20px;
+  text-align: center;
+  height: 100dvh;
+  min-height: 500px;
+  padding: 20px; /* Legger til padding for små skjermer */
+}
+
+.hero {
+  max-width: 200px;
+  border-radius: 50%; /* Sørger for at bildet alltid er rundt */
+}
+
+span {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+a {
+  width: fit-content;
+  align-self: center;
+}
+
+button {
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 20px;
+  width: 126px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.colorModeContainer {
+  position: relative;
+}
+
+.colorMode {
+  position: absolute;
+  right: 0;
+  width: 25px;
+}
+
+.colorMode:hover {
+  cursor: pointer;
+}
+
+.description {
+  max-width: 90%; /* Sikrer at teksten passer på små skjermer */
+  text-align: center;
+  margin: 0 auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Sentraliserer teksten */
+  gap: 20px;
+}
+
+/* Justering for større skjermer */
+@media (min-width: 800px) {
+  .container {
+    flex-direction: row-reverse; /* Bildet på høyre side */
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px;
+  }
+
+  .hero {
+    max-width: 350px;
+    width: 350px;
+  }
+
+  .description {
+    max-width: 24ch;
+    text-align: left; /* Venstrejustert tekst for større skjermer */
+  }
+}
+
+/* Enda større skjermer */
+@media (min-width: 1400px) {
+  .container {
+    .hero {
+      max-width: 400px;
+      width: 400px;
+    }
+  }
+}

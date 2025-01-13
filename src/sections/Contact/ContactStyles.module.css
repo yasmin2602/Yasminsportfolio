@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.subTitle {
+  font-size: 1rem;
+  color: var(--text-secondary-color); /* Dynamisk tekstfarge */
+  margin: 0;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--text-primary-color); /* Dynamisk tekstfarge */
+  font-weight: bold;
+  margin: 0;
+}
+
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 2px solid var(--border-color); /* Tydeligere ramme */
+  border-radius: 20px; /* Myke hjørner */
+  background-color: var(--background-color); /* Dynamisk bakgrunn */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtil skygge for dybde */
+  max-width: 600px;
+  width: 100%;
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out; /* Interaksjonsanimasjon */
+}
+
+.contactBox:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Forbedret skygge ved hover */
+  transform: scale(1.02); /* Liten zoom-effekt ved hover */
+}
+.icon {
+  width: 64px; /* Størrelse på ikonene */
+  height: 64px;
+}
+
+.link {
+  text-decoration: none; /* Remove underline */
+  color: var(--text-primary-color); /* Dynamic link color */
+  font-weight: bold;
+  transition: color 200ms ease-in-out, text-decoration 200ms ease-in-out; /* Add transition for text-decoration */
+}
+
+.link:hover {
+  color: var(--text-hover-color); /* Change color on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+@media (min-width: 800px) {
+  .contactBox {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

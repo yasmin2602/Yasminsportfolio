@@ -1,0 +1,96 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  box-sizing: border-box; /* Sørger for at padding inkluderes i bredden */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  transition: background-color 200ms ease-in-out;
+}
+
+.left h1 {
+  font-family: 'Rubik', sans-serif; /* Bruker samme font som h1 */
+  font-size: 32px; /* Samme størrelse som global h1 */
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.right {
+  display: flex;
+  gap: 30px;
+  padding-right: 20px; /* Mellomrom på høyre side */
+  margin-left: auto; /* Skyver menyen helt til høyre */
+  box-sizing: border-box;
+}
+
+.link {
+  text-decoration: none;
+  font-family: 'Roboto Mono', monospace; /* Bruker samme font som h2/h3 */
+  font-size: 20px; /* Samme størrelse som h2/h3 */
+  font-weight: bold;
+  color: var(--text-color);
+  transition: color 200ms ease-in-out;
+}
+
+.link:hover {
+  color: var(--btn-color);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .right {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px; /* Plasserer menyen under headeren */
+    right: 10px; /* Mellomrom til kanten */
+    background-color: var(--background-color);
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 9999;
+  }
+
+  .right.showMenu {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    padding: 0 20px 0 0; /* Mellomrom på høyre side */
+    margin-left: auto;
+  }
+}
