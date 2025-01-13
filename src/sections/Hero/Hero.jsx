@@ -47,8 +47,8 @@ function Hero() {
           </a>
         </span>
         <p className={styles.description}>
-        Aspiring Data Engineer exploring every challenge as an opportunity to grow. Passionate about learning, problem-solving, 
-        and building scalable solutions to create a smarter, data-driven future.
+        Aspiring Software Engineer embracing challenges to fuel growth, 
+        driven by learning, problem-solving, and building scalable solutions for a data-driven future.
         </p>
         <a href={CV} download>
           <button className="hover">Resume</button>

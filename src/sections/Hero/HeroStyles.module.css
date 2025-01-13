@@ -8,6 +8,7 @@
   height: 100dvh;
   min-height: 500px;
   padding: 20px; /* Legger til padding for små skjermer */
+  margin-top: 10px; /* Skyver hero-seksjonen lenger ned for å unngå headeren */
 }
 
 .hero {
